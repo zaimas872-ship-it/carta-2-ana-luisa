@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Para Ana Luisa ❤️</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(circle at top, #4b1d5e 0%, #16091f 45%, #08030c 100%);
+
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* ESTRELAS */
+
+.stars {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+
+    animation: brilho 2s infinite alternate;
+}
+
+@keyframes brilho {
+    from {
+        opacity: 0.2;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.8);
+    }
+}
+
+/* CORAÇÕES FLUTUANDO */
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+
+    color: #ff5c9d;
+
+    font-size: 20px;
+
+    pointer-events: none;
+
+    animation: subir 7s linear forwards;
+
+    text-shadow:
+        0 0 5px #ff5c9d,
+        0 0 15px #ff3d7f;
+}
+
+@keyframes subir {
+
+    0% {
+        transform: translateY(0) scale(0.8);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-110vh) scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* CARTA */
+
+.card {
+    position: relative;
+    z-index: 2;
+
+    width: min(90%, 750px);
+
+    margin: 70px auto;
+
+    padding: 40px 30px;
+
+    border-radius: 25px;
+
+    background: rgba(20, 5, 30, 0.72);
+
+    border: 1px solid rgba(255, 120, 180, 0.25);
+
+    box-shadow:
+        0 0 20px rgba(255, 70, 150, 0.25),
+        0 0 60px rgba(170, 50, 255, 0.15);
+
+    backdrop-filter: blur(10px);
+
+    text-align: center;
+}
+
+/* CORAÇÃO PRINCIPAL */
+
+.big-heart {
+    font-size: 70px;
+
+    margin-bottom: 15px;
+
+    animation:
+        pulsar 1.5s infinite,
+        brilhoCoracao 2s infinite alternate;
+
+    filter:
+        drop-shadow(0 0 10px #ff4f91)
+        drop-shadow(0 0 30px #ff176f);
+}
+
+@keyframes pulsar {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+@keyframes brilhoCoracao {
+
+    from {
+        filter:
+            drop-shadow(0 0 8px #ff4f91)
+            drop-shadow(0 0 15px #ff176f);
+    }
+
+    to {
+        filter:
+            drop-shadow(0 0 15px #ff4f91)
+            drop-shadow(0 0 40px #ff176f);
+    }
+}
+
+/* TITULO */
+
+h1 {
+    font-size: 42px;
+
+    margin-bottom: 30px;
+
+    color: #fff;
+
+    text-shadow:
+        0 0 5px white,
+        0 0 15px #ff72aa,
+        0 0 30px #ff3d7f;
+
+    animation: tituloBrilho 2s infinite alternate;
+}
+
+@keyframes tituloBrilho {
+
+    from {
+        text-shadow:
+            0 0 5px white,
+            0 0 15px #ff72aa;
+    }
+
+    to {
+        text-shadow:
+            0 0 10px white,
+            0 0 25px #ff72aa,
+            0 0 45px #ff3d7f;
+    }
+}
+
+/* TEXTO */
+
+#mensagem {
+    white-space: pre-line;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color: #f8eaf2;
+
+    text-shadow:
+        0 0 5px rgba(255,255,255,0.5);
+
+    min-height: 400px;
+}
+
+/* DECLARAÇÃO ESPECIAL */
+
+.declaracao-especial {
+
+    position: relative;
+
+    margin: 40px 0;
+
+    padding: 28px 22px;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    background:
+        rgba(255, 60, 130, 0.10);
+
+    border:
+        1px solid rgba(255, 120, 170, 0.5);
+
+    color: white;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    text-shadow:
+        0 0 5px white,
+        0 0 12px #ff6fa3,
+        0 0 25px #ff3d7f;
+
+    box-shadow:
+        0 0 10px rgba(255, 80, 150, 0.5),
+        0 0 30px rgba(255, 50, 130, 0.35),
+        0 0 60px rgba(255, 40, 120, 0.15),
+        inset 0 0 25px rgba(255, 80, 150, 0.1);
+
+    animation: brilhoEspecial 2s ease-in-out infinite alternate;
+}
+
+@keyframes brilhoEspecial {
+
+    from {
+        transform: scale(1);
+
+        box-shadow:
+            0 0 10px rgba(255, 80, 150, 0.4),
+            0 0 30px rgba(255, 50, 130, 0.25);
+    }
+
+    to {
+        transform: scale(1.02);
+
+        box-shadow:
+            0 0 20px rgba(255, 100, 170, 0.8),
+            0 0 50px rgba(255, 50, 130, 0.5),
+            0 0 80px rgba(255, 40, 120, 0.25);
+    }
+}
+
+/* LUZ PASSANDO */
+
+.declaracao-especial::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 60%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.45),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    animation: luzPassando 3s infinite;
+}
+
+@keyframes luzPassando {
+
+    0% {
+        left: -100%;
+    }
+
+    50%, 100% {
+        left: 150%;
+    }
+}
+
+/* DECLARAÇÃO FINAL */
+
+.declaracao {
+
+    margin-top: 30px;
+
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    color: #fff;
+
+    text-shadow:
+        0 0 5px white,
+        0 0 15px #ff5c9d;
+}
+
+/* ASSINATURA */
+
+.assinatura {
+
+    margin-top: 40px;
+
+    font-size: 17px;
+
+    color: #ffb6d5;
+
+    text-shadow:
+        0 0 8px #ff5c9d;
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .card {
+        margin: 30px auto;
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    #mensagem,
+    .declaracao-especial {
+        font-size: 16px;
+    }
+
+    .big-heart {
+        font-size: 55px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<div class="card">
+
+    <div class="big-heart">❤️</div>
+
+    <h1>Para Ana Luisa</h1>
+
+    <div id="mensagem"></div>
+
+    <div class="declaracao-especial">
+
+        Mesmo eu e você estando distantes,<br>
+        eu nunca vou desistir do nosso relacionamento.<br><br>
+
+        Por você, meu amor, eu faria quantos códigos fossem necessários<br>
+        só pra conseguir demonstrar o quanto eu amo você. ❤️
+
+    </div>
+
+    <div class="declaracao">
+
+        Ana Luisa,<br><br>
+
+        eu te amo. ❤️<br><br>
+
+        E espero que um dia a gente possa olhar pra trás
+        e lembrar de tudo isso como o começo da nossa história.
+
+    </div>
+
+    <div class="assinatura">
+
+        dyoguinho gameplay<br>
+        @daaninhadabucetinha ❤️
+
+    </div>
+
+</div>
+
+<script>
+
+/* CRIAR ESTRELAS */
+
+const stars = document.querySelector(".stars");
+
+for (let i = 0; i < 100; i++) {
+
+    const star = document.createElement("div");
+
+    star.classList.add("star");
+
+    star.style.left = Math.random() * 100 + "%";
+    star.style.top = Math.random() * 100 + "%";
+
+    star.style.animationDelay =
+        Math.random() * 3 + "s";
+
+    stars.appendChild(star);
+}
+
+/* CORAÇÕES */
+
+function criarCoracao() {
+
+    const heart = document.createElement("div");
+
+    heart.classList.add("heart");
+
+    heart.innerHTML = "❤️";
+
+    heart.style.left =
+        Math.random() * 100 + "vw";
+
+    heart.style.fontSize =
+        (12 + Math.random() * 18) + "px";
+
+    heart.style.animationDuration =
+        (5 + Math.random() * 5) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 10000);
+}
+
+setInterval(criarCoracao, 500);
+
+/* TEXTO DIGITANDO */
+
+const mensagem = `Ana Luisa ❤️
+
+Desde o dia 07/11/2025, quando a gente se conheceu,
+tem uma coisa que nunca mudou:
+
+eu nunca parei de pensar em você.
+
+Talvez naquele dia eu nem imaginasse
+o quanto você se tornaria importante pra mim.
+
+Mas o tempo foi passando,
+e eu fui percebendo o quanto gosto de ter você na minha vida.
+
+Eu gosto das nossas conversas,
+dos momentos que a gente passa juntos
+e até das pequenas coisas que talvez você nem perceba.
+
+Você conseguiu ocupar um espaço no meu coração
+que eu não quero que outra pessoa ocupe.
+
+Eu não sei exatamente o que o futuro vai trazer,
+mas sei que, quando penso nele,
+eu gostaria que você estivesse nele também.
+
+07/11/2025 não é só uma data pra mim.
+
+É o dia em que eu conheci alguém
+que acabou se tornando muito especial. ❤️`;
+
+const elemento =
+    document.getElementById("mensagem");
+
+let indice = 0;
+
+function escrever() {
+
+    if (indice < mensagem.length) {
+
+        elemento.textContent +=
+            mensagem.charAt(indice);
+
+        indice++;
+
+        setTimeout(escrever, 35);
+
+    }
+}
+
+escrever();
+
+</script>
+
+</body>
+</html>
